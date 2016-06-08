@@ -1,11 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+platform :ios, '8.0'
 
-target 'TSMessages', :exclusive => true do
+project 'TSMessages'
+
+target 'TSMessages' do
   pod "TSMessages", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
+target 'Tests' do
   pod "TSMessages", :path => "../"
 
   pod 'Specta', '~> 0.2.1'
