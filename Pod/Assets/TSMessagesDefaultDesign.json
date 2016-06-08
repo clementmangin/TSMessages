@@ -5,7 +5,7 @@
         "buttonTitleTextColor": "#FFFFFF",
         "buttonTitleShadowColor": "#67B759",
         "buttonTitleShadowOffsetX": 0,
-        "buttonTitleShadowOffsetY": -1,
+        "buttonTitleShadowOffsetY": 0,
         "contentFontSize": 12,
         "contentTextColor": "#FFFFFF",
         "imageName": "NotificationBackgroundSuccessIcon.png",
@@ -14,7 +14,8 @@
         "shadowOffsetY": -1,
         "textColor": "#FFFFFF",
         "titleFontSize": 14,
-        "backgroundColor": "#76CF67"
+        "backgroundColor": "#76CF67",
+        "alpha": 1.0
     },
     "message": {
         "borderColor": "#727C83",
@@ -22,7 +23,7 @@
         "buttonTitleTextColor": "#727C83",
         "buttonTitleShadowColor": "#EBEEF1",
         "buttonTitleShadowOffsetX": 0,
-        "buttonTitleShadowOffsetY": 1,
+        "buttonTitleShadowOffsetY": 0,
         "contentFontSize": 12,
         "contentTextColor": "#727C83",
         "imageName": "",
@@ -31,7 +32,8 @@
         "shadowOffsetY": 1,
         "textColor": "#727C83",
         "titleFontSize": 14,
-        "backgroundColor": "#D4DDDF"
+        "backgroundColor": "#D4DDDF",
+        "alpha": 1.0
     },
     "warning": {
         "borderColor": "#A28918",
@@ -39,7 +41,7 @@
         "buttonTitleTextColor": "#484638",
         "buttonTitleShadowColor": "#E5D87C",
         "buttonTitleShadowOffsetX": 0,
-        "buttonTitleShadowOffsetY": 1,
+        "buttonTitleShadowOffsetY": 0,
         "contentFontSize": 12,
         "contentTextColor": "#484638",
         "imageName": "NotificationBackgroundWarningIcon.png",
@@ -48,7 +50,8 @@
         "shadowOffsetY": 1,
         "textColor": "#484638",
         "titleFontSize": 14,
-        "backgroundColor": "#DAC43C"
+        "backgroundColor": "#DAC43C",
+        "alpha": 1.0
     },
     "error": {
         "borderColor": "#700000",
@@ -56,7 +59,7 @@
         "buttonTitleTextColor": "#FFFFFF",
         "buttonTitleShadowColor": "#812929",
         "buttonTitleShadowOffsetX": 0,
-        "buttonTitleShadowOffsetY": -1,
+        "buttonTitleShadowOffsetY": 0,
         "contentFontSize": 12,
         "contentTextColor": "#FFFFFF",
         "imageName": "NotificationBackgroundErrorIcon.png",
@@ -65,6 +68,7 @@
         "shadowOffsetY": -1,
         "textColor": "#FFFFFF",
         "titleFontSize": 14,
-        "backgroundColor": "#DD3B41"
+        "backgroundColor": "#DD3B41",
+        "alpha": 1.0
     }
 }

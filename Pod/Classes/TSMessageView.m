@@ -8,7 +8,6 @@
 
 #import "TSMessageView.h"
 #import "HexColors.h"
-#import "TSBlurView.h"
 #import "TSMessage.h"
 
 #define TSMessageViewMinimumPadding 15.0
@@ -43,7 +42,7 @@ static NSMutableDictionary *_notificationDesign;
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UIView *borderView;
-@property (nonatomic, strong) TSBlurView *backgroundBlurView;
+@property (nonatomic, strong) UIView *backgroundView;
 
 @property (nonatomic, assign) CGFloat textSpaceLeft;
 @property (nonatomic, assign) CGFloat textSpaceRight;
@@ -251,10 +250,12 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         }
 
         // On iOS 7 and above use a blur layer instead (not yet finished)
-        _backgroundBlurView = [[TSBlurView alloc] init];
-        self.backgroundBlurView.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
-        self.backgroundBlurView.blurTintColor = [UIColor colorWithHexString:current[@"backgroundColor"]];
-        [self addSubview:self.backgroundBlurView];
+        self.backgroundColor = [UIColor clearColor];
+        _backgroundView = [[UIView alloc] init];
+        self.backgroundView.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+        self.backgroundView.backgroundColor = [UIColor colorWithHexString:current[@"backgroundColor"]];
+        self.backgroundView.alpha = [current[@"alpha"] floatValue];
+        [self addSubview:self.backgroundView];
 
         UIColor *fontColor = [UIColor colorWithHexString:[current valueForKey:@"textColor"]];
 
@@ -486,8 +487,8 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
     }
 
 
-    CGRect backgroundFrame = CGRectMake(self.backgroundBlurView.frame.origin.x,
-                                        self.backgroundBlurView.frame.origin.y,
+    CGRect backgroundFrame = CGRectMake(self.backgroundView.frame.origin.x,
+                                        self.backgroundView.frame.origin.y,
                                         screenWidth,
                                         currentHeight);
 
@@ -513,7 +514,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         backgroundFrame = UIEdgeInsetsInsetRect(backgroundFrame, UIEdgeInsetsMake(0.f, 0.f, -30.f, 0.f));
     }
     
-    self.backgroundBlurView.frame = backgroundFrame;
+    self.backgroundView.frame = backgroundFrame;
 
     return currentHeight;
 }
