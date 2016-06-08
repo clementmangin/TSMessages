@@ -13,13 +13,21 @@
 
 @implementation TSDemoViewController
 
+- (void)setFullscreenLayout:(bool)wantsFullscreen {
+    self.edgesForExtendedLayout = wantsFullscreen ? UIRectEdgeAll : UIRectEdgeNone;
+}
+
+- (bool)isFullscreen {
+    return self.edgesForExtendedLayout == UIRectEdgeAll;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [TSMessage setDefaultViewController:self];
     [TSMessage setDelegate:self];
-    self.wantsFullScreenLayout = YES;
+    [self setFullscreenLayout:YES];
     [self.navigationController.navigationBar setTranslucent:YES];
 }
 
@@ -82,7 +90,7 @@
 
 - (IBAction)didTapToggleWantsFullscreen:(id)sender
 {
-    self.wantsFullScreenLayout = !self.wantsFullScreenLayout;
+    [self setFullscreenLayout:![self isFullscreen]];
     [self.navigationController.navigationBar setTranslucent:!self.navigationController.navigationBar.isTranslucent];
 }
 

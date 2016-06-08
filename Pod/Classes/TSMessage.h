@@ -191,10 +191,6 @@ typedef NS_ENUM(NSInteger,TSMessageNotificationDuration) {
  You don't have to use this method. */
 + (void)prepareNotificationToBeShown:(TSMessageView *)messageView;
 
-/** Indicates whether currently the iOS 7 style of TSMessages is used
- This depends on the Base SDK and the currently used device */
-+ (BOOL)iOS7StyleEnabled;
-
 /** Indicates whether the current navigationBar is hidden by isNavigationBarHidden 
  on the UINavigationController or isHidden on the navigationBar of the current 
  UINavigationController */

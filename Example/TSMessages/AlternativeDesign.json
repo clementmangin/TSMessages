@@ -1,6 +1,5 @@
 {
     "success": {
-        "backgroundImageName": "NotificationBackgroundSuccess.png",
         "borderColor": "#005700",
         "borderHeight": 1,
         "buttonBackgroundImageName": "NotificationButtonBackground.png",
@@ -18,7 +17,6 @@
         "titleFontSize": 25
     },
     "message": {
-        "backgroundImageName": "NotificationBackgroundMessage.png",
         "borderColor": "#727C83",
         "borderHeight": 1,
         "buttonBackgroundImageName": "NotificationButtonBackground.png",
@@ -36,7 +34,6 @@
         "titleFontSize": 14
     },
     "warning": {
-        "backgroundImageName": "NotificationBackgroundWarning.png",
         "borderColor": "#A28918",
         "borderHeight": 1,
         "buttonBackgroundImageName": "NotificationButtonBackground.png",
@@ -54,7 +51,6 @@
         "titleFontSize": 14
     },
     "error": {
-        "backgroundImageName": "NotificationBackgroundError.png",
         "borderColor": "#700000",
         "borderHeight": 1,
         "buttonBackgroundImageName": "NotificationButtonBackground.png",
