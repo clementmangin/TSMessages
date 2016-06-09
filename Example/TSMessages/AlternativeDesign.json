@@ -16,7 +16,7 @@
         "textColor": "#FFFFFF",
         "titleFontSize": 25,
         "backgroundColor": "#000000",
-        "alpha": 0.8
+        "backgroundAlpha": 0.8
     },
     "message": {
         "borderColor": "#727C83",
@@ -35,7 +35,7 @@
         "textColor": "#727C83",
         "titleFontSize": 14,
         "backgroundColor": "#000000",
-        "alpha": 0.8
+        "backgroundAlpha": 0.8
     },
     "warning": {
         "borderColor": "#A28918",
@@ -54,7 +54,7 @@
         "textColor": "#484638",
         "titleFontSize": 14,
         "backgroundColor": "#000000",
-        "alpha": 0.8
+        "backgroundAlpha": 0.8
     },
     "error": {
         "borderColor": "#700000",
@@ -73,6 +73,6 @@
         "textColor": "#FFFFFF",
         "titleFontSize": 14,
         "backgroundColor": "#000000",
-        "alpha": 0.8
+        "backgroundAlpha": 0.8
     }
 }
