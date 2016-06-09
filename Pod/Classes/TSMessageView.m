@@ -99,6 +99,68 @@ static NSMutableDictionary *_notificationDesign;
     [self updateCurrentIcon];
 }
 
+- (void)setTitleFont:(UIFont *)font forType: (TSMessageNotificationType) notificationType {
+    if (self->notificationType == notificationType) {
+        [self setTitleFont:font];
+    }
+}
+
+- (void)setBackgroundAlpha:(CGFloat)alpha forType: (TSMessageNotificationType) notificationType {
+    if (self->notificationType == notificationType) {
+        self.backgroundView.alpha = alpha;
+    }
+}
+
+- (void)setTitleTextColor:(UIColor *)color forType: (TSMessageNotificationType) notificationType {
+    if (self->notificationType == notificationType) {
+        [self setTitleTextColor:color];
+    }
+}
+
+- (void)setContentFont:(UIFont *)font forType: (TSMessageNotificationType) notificationType {
+    if (self->notificationType == notificationType) {
+        [self setContentFont:font];
+    }
+}
+
+- (void)setContentTextColor:(UIColor *)color forType: (TSMessageNotificationType) notificationType {
+    if (self->notificationType == notificationType) {
+        [self setContentTextColor:color];
+    }
+}
+
+- (void)setIcon:(UIImage *)icon forType: (TSMessageNotificationType) notificationType {
+    switch (notificationType)
+    {
+        case TSMessageNotificationTypeMessage:
+        {
+            [self setMessageIcon:icon];
+            break;
+        }
+        case TSMessageNotificationTypeError:
+        {
+            [self setErrorIcon:icon];
+            break;
+        }
+        case TSMessageNotificationTypeSuccess:
+        {
+            [self setSuccessIcon:icon];
+            break;
+        }
+        case TSMessageNotificationTypeWarning:
+        {
+            [self setWarningIcon:icon];
+            break;
+        }
+    }
+}
+
+-(void) setBackgroundColor:(UIColor *)color forType: (TSMessageNotificationType) notificationType{
+    if (self->notificationType == notificationType) {
+        self.backgroundView.backgroundColor = color;
+    }
+}
+
 -(void) updateCurrentIcon{
     UIImage *image = nil;
     switch (notificationType)

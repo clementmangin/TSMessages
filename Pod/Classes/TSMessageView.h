@@ -34,7 +34,7 @@
 /** Is the message currenlty fully displayed? Is set as soon as the message is really fully visible */
 @property (nonatomic, assign) BOOL messageIsFullyDisplayed;
 
-/** Customize title font using Apperance */
+/** Customize using Appearance */
 @property (nonatomic,strong) UIFont *titleFont UI_APPEARANCE_SELECTOR;
 @property (nonatomic,strong) UIColor *titleTextColor UI_APPEARANCE_SELECTOR;
 @property (nonatomic,strong) UIFont *contentFont UI_APPEARANCE_SELECTOR;
@@ -44,6 +44,13 @@
 @property (nonatomic,strong) UIImage *successIcon UI_APPEARANCE_SELECTOR;
 @property (nonatomic,strong) UIImage *warningIcon UI_APPEARANCE_SELECTOR;
 
+- (void)setTitleFont:(UIFont *)font forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
+- (void)setBackgroundAlpha:(CGFloat)alpha forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
+- (void)setTitleTextColor:(UIColor *)color forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
+- (void)setContentFont:(UIFont *)font forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
+- (void)setContentTextColor:(UIColor *)color forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
+- (void)setIcon:(UIImage *)icon forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
+- (void)setBackgroundColor:(UIColor *)color forType: (TSMessageNotificationType) notificationType UI_APPEARANCE_SELECTOR;
 
 
 /** Inits the notification view. Do not call this from outside this library.
