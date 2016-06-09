@@ -489,8 +489,8 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
     }
 
 
-    CGRect backgroundFrame = CGRectMake(self.backgroundView.frame.origin.x,
-                                        self.backgroundView.frame.origin.y,
+    CGRect backgroundFrame = CGRectMake(0,
+                                        0,
                                         screenWidth,
                                         currentHeight);
 
