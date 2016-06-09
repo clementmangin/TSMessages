@@ -101,11 +101,11 @@ You can customize message view elements using UIAppearance
 [[TSMessageView appearance] setTitleFont:[UIFont boldSystemFontOfSize:6]];
 [[TSMessageView appearance] setTitleTextColor:[UIColor redColor]];
 [[TSMessageView appearance] setContentFont:[UIFont boldSystemFontOfSize:10]];
-[[TSMessageView appearance]setContentTextColor:[UIColor greenColor]];
-[[TSMessageView appearance]setErrorIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
-[[TSMessageView appearance]setSuccessIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
-[[TSMessageView appearance]setMessageIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
-[[TSMessageView appearance]setWarningIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+[[TSMessageView appearance] setContentTextColor:[UIColor greenColor]];
+[[TSMessageView appearance] setErrorIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+[[TSMessageView appearance] setSuccessIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+[[TSMessageView appearance] setMessageIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
+[[TSMessageView appearance] setWarningIcon:[UIImage imageNamed:@"NotificationButtonBackground"]];
 //End of override
 
 return YES;
@@ -121,8 +121,10 @@ The following properties can be set when creating a new notification:
 * **subtitle**: The text that is displayed underneath the title (optional)
 * **image**: A custom icon image that is used instead of the default one (optional)
 * **type**: The notification type (Message, Warning, Error, Success)
-* **duration**: The duration the notification should be displayed
-* **callback**: The block that should be executed, when the user dismissed the message by tapping on it or swiping it to the top.
+* **duration**: The duration the notification should be displayed (optional, defaults to a value that depends on the height of the message view, around 5 seconds)
+* **callback**: The block that should be executed when the user dismissed the message by tapping on it or swiping it to the top (optional)
+* **buttonTitle**: The title of a button that is displayed to the right of the title and subtitle (optional)
+* **buttonCallback**: The block that should be executed when the the button is tapped (optional)
 
 Except the title and the notification type, all of the listed values are optional
 
@@ -130,21 +132,9 @@ If you don't want a detailed description (the text underneath the title) you don
 
 ## Screenshots
 
-**iOS 7 Design**
+![iOS Error](http://www.toursprung.com/wp-content/uploads/2013/09/error_ios7.png)
 
-![iOS 7 Error](http://www.toursprung.com/wp-content/uploads/2013/09/error_ios7.png)
-
-![iOS 7 Message](http://www.toursprung.com/wp-content/uploads/2013/09/warning_ios7.png)
-
-**iOS 6 Design**
-
-![Warning](http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationWarning.png)
-
-![Success](http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationSuccess.png)
-
-![Error](http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationError.png)
-
-![Message](http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationMessage.png)
+![iOS Message](http://www.toursprung.com/wp-content/uploads/2013/09/warning_ios7.png)
 
 
 # License
