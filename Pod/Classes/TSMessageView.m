@@ -254,7 +254,9 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         _backgroundView = [[UIView alloc] init];
         self.backgroundView.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
         self.backgroundView.backgroundColor = [UIColor colorWithHexString:current[@"backgroundColor"]];
-        self.backgroundView.alpha = [current[@"alpha"] floatValue];
+        if ([current objectForKey:@"backgroundAlpha"]) {
+            self.backgroundView.alpha = [current[@"backgroundAlpha"] floatValue];
+        }
         [self addSubview:self.backgroundView];
 
         UIColor *fontColor = [UIColor colorWithHexString:[current valueForKey:@"textColor"]];
